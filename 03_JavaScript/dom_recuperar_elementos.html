@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meu cabeçalho.</h1>
+    <p id="meuParagrafo" class="paragrafo">Meu primeiro parágrafo.</p>
+    <p id="meuOutroParagrafo"class="paragrafo">Meu segundo parágrafo</p>
+    <p class="paragrafo">Meu terceiro parágrafo.</p>
+
+    <div id="div1"></div>
+
+    <script>
+        // Lugar recomendável de colocar o código javascript
+        var meuParagrafo = document.getElementById("meuParagrafo");
+        meuParagrafo.innerHTML = "Meu novo parágrafo";
+        meuParagrafo.hidden = true;
+
+        var meusParagrafos = document.getElementsByTagName("p");
+        // console.log(meusParagrafos);
+        // window.alert("Minha página possui "+ meusParagrafos.length + " parágrafos");
+
+        var paragrafosComClasse = document.getElementsByClassName("paragrafo");
+        // console.log(paragrafosComClasse);
+
+        var segundoParagrafo = document.getElementById("meuOutroParagrafo");
+        segundoParagrafo.style.color = "red";
+
+        var div1 = document.getElementById("div1");
+        div1.style.backgroundColor = "blue";
+        // div.style.height = "200px";
+        // div.style.width = "400px";
+
+
+        div1.style.setProperty("height", "200px");
+        div1.style.setProperty("width", "400px");
+
+        // document.write("<p>Meu outro parágrafo.</p>");
+        // window.alert("Meu primeiro alerta");
+        // console.log("saída no console");
+    </script>
+</body>
+</html>
