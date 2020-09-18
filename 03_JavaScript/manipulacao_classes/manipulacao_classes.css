@@ -1,0 +1,19 @@
+.texto-padrao{
+    font-size: 25px;
+    color: darkblue;
+}
+
+.texto-grande{
+    font-size: 35px;
+    color: darkred;
+}
+
+.texto-pequeno{
+    font-size: 15px;
+    color: darkgreen;
+}
+
+.texto-personalizado{
+    font-weight: bold;
+    font-style: italic;
+}

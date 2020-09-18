@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: lightgray;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    border: 2px solid black;
+    width: 150px;
+    height: 200px;
+    background-color: white;
+}
+
+button{
+    height: 30px;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
