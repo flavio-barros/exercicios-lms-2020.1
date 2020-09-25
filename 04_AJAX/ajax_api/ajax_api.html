@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            display: inline;
+        }
+
+        .container-tabela{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="carregarInformacoes()">
+        Carregar Informações
+    </button>
+    <br>
+    <strong>
+        Quantidade de usuários: 
+    </strong>
+    <p id="qtd-usuarios"></p>
+    <br>
+    <strong>
+        Quantidade de páginas: 
+    </strong>
+    <p id="qtd-paginas"></p>
+    <br>
+
+    <button onclick="carregarTabela()">
+        Carregar Tabela
+    </button>
+
+    <div class="container-tabela">
+        <table id="tabela-usuario">
+            <tr>
+                <th>Primeiro nome</th>
+                <th>Último nome</th>
+                <th>Email</th>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="ajax_api.js"></script>
+</body>
+</html>

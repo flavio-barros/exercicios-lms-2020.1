@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Conversão Objeto JS -> JSON
+        var pessoa = {Nome: "Fulnao", Idade: 30, Cidade: "Fortaleza"};
+        var pessoaJSON = JSON.stringify(pessoa);
+        // console.log(pessoa);
+        // console.log(pessoaJSON);
+
+        var listaJSON = '[' +
+            '{"Nome": "Fulano 1", "Idade": 25, "Cidade": "Quixadá"},' +
+            '{"Nome": "Fulano 2", "Idade": 32, "Cidade": "Fortaleza"},' +
+            '{"Nome": "Fulano 3", "Idade": 22, "Cidade": "Quixeramobim"},'+
+            '{"Nome": "Fulano 4", "Idade": 24, "Cidade": "Quixadá"}' +
+            ']';
+        var lista = JSON.parse(listaJSON);
+        
+        for(var i=0; i<lista.length; i++){
+            var div = document.createElement("div");
+
+            var h1 = document.createElement("h1");
+            var h1Texto = document.createTextNode(lista[i].Nome);
+            h1.appendChild(h1Texto);
+
+            div.appendChild(h1);
+
+            document.body.appendChild(div);
+        }
+
+    </script>
+</body>
+</html>
