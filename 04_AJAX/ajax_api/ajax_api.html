@@ -13,9 +13,13 @@
         .container-tabela{
             display: none;
         }
+
+        input{
+            margin: 10px;
+        }
     </style>
 </head>
-<body>
+<body onload="configurarEventos()">
 
     <button onclick="carregarInformacoes()">
         Carregar Informações
@@ -45,6 +49,28 @@
                 <th>Excluir</th>
             </tr>
         </table>
+    </div>
+
+    <div class="container-formulario">
+        <h2>Formulário cadastrar usuário</h2>
+        <form id="form-usuario">
+            <div> 
+                <label for="nome-usuario">Nome: </label><br>
+                <input type="text" id="nome-usuario" name="name">
+            </div>
+
+            <div> 
+                <label for="idade-usuario">Idade: </label><br>
+                <input type="number" id="idade-usuario" name="age">
+            </div>
+
+            <div> 
+                <label for="trabalho-usuario">Trabalho: </label><br>
+                <input type="text" id="trabalho-usuario" name="job">
+            </div>
+
+            <button type="submit">Criar</button>
+        </form>
     </div>
     
     <script src="ajax_api.js"></script>

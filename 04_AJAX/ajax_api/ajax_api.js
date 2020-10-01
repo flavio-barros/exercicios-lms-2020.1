@@ -1,4 +1,4 @@
-function request(metodo, url, cFunction, status){
+function request(metodo, url, cFunction, status, dados){
     if(status == undefined){
         status = 200;
     }
@@ -9,7 +9,12 @@ function request(metodo, url, cFunction, status){
         }
     };
     xhttp.open(metodo, url, true);
-    xhttp.send();
+    if(dados == undefined){
+        xhttp.send();
+    }else{
+        xhttp.send(JSON.stringify(dados));
+    }
+    
 }
 
 function carregarInformacoes(){
@@ -105,4 +110,53 @@ function excluirUsuario(elemento){
 
 function responseExcluirUsuario(){
     alert("Usuário excluído");
+}
+
+function configurarEventos(){
+    var form = document.getElementById("form-usuario");
+
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        enviarFormulario(this);
+    });
+}
+
+function enviarFormulario(form){
+    if(validarFormulario(form)){
+        var dados = {
+            name: form["name"].value,
+            job: form["job"].value,
+            age: form["age"].value
+        };
+        form.reset();
+        request("POST", "https://reqres.in/api/users", responseEnviarFormulario, 201, dados);
+    }
+}
+
+function validarFormulario(form){
+    var name = form["name"].value;
+    var idade = form["age"].value;
+
+    if(name.length > 20){
+        alert("Campo nome deve ter no máximo 20 caracteres");
+        return false;
+    }
+
+    if(isNaN(idade)){
+        alert("O campo idade deve ter somente números");
+        return false;
+    }
+
+    if(idade<18){
+        alert("O usuário deve ter 18 anos ou mais");
+        return false;
+    }
+
+    return true;
+}
+
+function responseEnviarFormulario(xhttp){
+    var response = JSON.parse(xhttp.responseText);
+
+    alert("Usuário criado com id = "+response.id);
 }
