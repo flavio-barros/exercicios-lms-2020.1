@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="testar-get">Testar GET</button>
+    <button id="testar-post">Testar POST</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#testar-get").click(function(){
+                $.ajax({
+                    url: "https://reqres.in/api/users",
+    	            type: "GET",
+    	            success: function(response){
+       		            console.log(response.data[0]);
+    	            }
+                });
+
+            });
+
+            $("#testar-post").click(function(){
+                $.ajax({
+                    url: "https://reqres.in/api/users",
+                    type: "POST",
+                    data: {
+                        nome: "Flávio",
+                        sobrenome: "Barros"
+                    },
+    	            success: function(response){
+       		            console.log(response);
+    	            }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

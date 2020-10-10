@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container-divs{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        button{
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-divs">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+
+    <button id="btn-ocultar">Ocultar</button>
+    <button id="btn-mostrar">Mostrar</button>
+    <button id="btn-alternar">Ocultar/Mostrar</button><br>
+    <button id="btn-fadein">FadeIn</button>
+    <button id="btn-fadeout">FadeOut</button><br>
+    <button id="btn-alternar-slide">Slide Down/Up</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="efeitos.js"></script>
+</body>
+</html>
