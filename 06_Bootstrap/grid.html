@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/06_Bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+
+    <style>
+        .ex{
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+        .ex1{
+            background-color: lightcoral;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Colunas com tamanhos iguais</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col ex">1</div>
+            <div class="col ex">2</div>
+        </div>
+        <div class="row">
+            <div class="col-lg ex">1</div>
+            <div class="col-lg ex">2</div>
+            <div class="col-lg ex">3</div>
+            <div class="col-lg ex">4</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Colunas com tamanhos diferentes</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 ex">1</div>
+            <div class="col-4 ex">2</div>
+            <div class="col-2 ex">3</div>
+        </div>
+        <div class="row">
+            <div class="col-auto ex">1</div>
+            <div class="col ex">2</div>
+            <div class="col ex">3</div>
+            <div class="col ex">4</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Colunas com classes diferentes</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 col-xl-4 ex">1</div>
+            <div class="col-5 col-xl-4 ex">2</div>
+            <div class="col-2 col-xl-4 ex">3</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Rows com .row-cols</h3>
+            </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col ex">1</div>
+            <div class="col ex">2</div>
+            <div class="col ex">3</div>
+            <div class="col ex">4</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Alinhamento vertical</h3>
+            </div>
+        </div>
+
+        <div class="row ex1 align-items-center">
+            <div class="col ex">1</div>
+            <div class="col ex">2</div>
+            <div class="col ex">3</div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/06_Bootstrap/bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
